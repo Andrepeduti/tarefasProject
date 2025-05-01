@@ -1,0 +1,89 @@
+<app-header />
+<main>
+  <ul id="users">
+    @for (user of users; track user.id) {
+    <li>
+      <app-user [selected]="user.id === selectedUser?.id" [user]="user" (select)="onSelectUser($event)" />
+    </li>
+    }
+  </ul>
+  
+  @if (selectedUser) {
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name"></app-tasks>
+  } @else {
+    <p id="fallback">Select a user to see their tasks!</p>
+  }
+</main>
+
+<!-- <div class="container mt-4">
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-person"></i> Nome:</span>
+    <input
+      id="focoNesse"
+      tabindex="1"
+      type="text"
+      class="form-control w-50"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Digite seu nome"
+    />
+  </div>
+
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-envelope"></i> E-mail:</span>
+    <input
+      type="text"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Nome"
+    />
+  </div>
+
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-telephone"></i> Telefone:</span>
+    <input
+      tabindex="2"
+      type="text"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Nome"
+    />
+  </div>
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-person"></i> Nome:</span>
+    <input
+      type="text"
+      class="form-control w-50"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Digite seu nome"
+    />
+  </div>
+
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-envelope"></i> E-mail:</span>
+    <input
+      tabindex="3"
+      type="text"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Nome"
+    />
+  </div>
+
+  <div class="mb-3 d-flex align-items-center gap-2">
+    <span><i class="bi bi-telephone"></i> Telefone:</span>
+    <input
+      type="text"
+      [readonly]="travado"
+      [ngClass]="{ 'input-travado': travado }"
+      (blur)="onBlur()"
+      placeholder="Nome"
+    />
+  </div>
+</div> -->
