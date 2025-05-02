@@ -6,7 +6,7 @@
 ![users](image/image-1.png)
 
 ## Nova Tarefa
-![newtask]()
+![newtask](image/image-2.png)
 
 ## Board de tarefas
 ![visaoTarefas](image/image-3.png)
