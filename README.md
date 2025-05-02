@@ -1,15 +1,15 @@
 # NewProject
 ## Visão geral
-![visaogeral](assets/image.png)
+![visaogeral](image/image.png)
 
 ## User
-![users](assets/image-1.png)
+![users](image/image-1.png)
 
 ## Nova Tarefa
 ![newtask]()
 
 ## Board de tarefas
-![visaoTarefas](assets/image-3.png)
+![visaoTarefas](image/image-3.png)
 
 ## Sobre o projeto
 Projeto foi feito usando Angular 19.
